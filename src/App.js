@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
+import { Button } from './components/Button/Button';
+import { Input } from './components/Input/input';
+import { Message } from './components/Message/message';
+
+const name = "Ivan"
+const message = "Переданный текст"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <h2>Hello</h2>
+      <Input name={name}></Input>
+      <Button name={name}/>
+      <Message message={message}></Message>
+    </Fragment>
+  )
 }
 
 export default App;
